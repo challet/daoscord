@@ -13,7 +13,7 @@ contract Erc20VotesControlled is ERC20Votes, Ownable {
   }
   
   function decimals() public pure override returns (uint8) {
-      return 0;
+    return 0;
   }
   
   function transfer(address, uint) public pure override returns (bool) {
@@ -34,6 +34,17 @@ contract Erc20VotesControlled is ERC20Votes, Ownable {
     } else {
       return 0;
     }
+  }
+  
+  function allot(address to, uint256 newBalance) public onlyOwner returns (bool) {
+    int256 delta = int256(newBalance) - int256(super.balanceOf(to));
+    if (delta > 0) {
+      _mint(to, uint256(delta));
+    }
+    if (delta < 0) {
+      _burn(to, uint256(-delta));
+    }
+    return true;
   }
   
 }
