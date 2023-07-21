@@ -16,8 +16,11 @@
     "@aragon/sdk-client-common": "^1.2.0-rc0",
     "@ethersproject/providers": "^5.7.2",
     "@ethersproject/wallet": "^5.7.0",
+    "axios": "^1.4.0",
     "discord.js": "^13.3.1",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "lowdb": "^3.0.0",
+    "web3.storage": "^3.5.1"
   },
   "license": "ISC",
   "devDependencies": {

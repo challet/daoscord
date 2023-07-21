@@ -8,6 +8,7 @@ import {
     VotingMode
 } from "@aragon/sdk-client";
 import {TokenService} from "../token/token-service";
+import {getDb} from "../database/db-manager";
 
 export class DaoService {
 
@@ -56,8 +57,8 @@ export class DaoService {
             plugins: [tokenVotingInstallItem], // plugin array cannot be empty or the transaction will fail. you need at least one governance mechanism to create your DAO.
         };
 
+        const db = await getDb()
         const steps = client.methods.createDao(createDaoParams);
-
         for await (const step of steps) {
             try {
                 switch (step.key) {
@@ -69,12 +70,16 @@ export class DaoService {
                             daoAddress: step.address,
                             pluginAddresses: step.pluginAddresses,
                         });
+                        db.data.guildUuid = interaction.guildId
+                        db.data.daoAddress = step.address
+                        db.data.tokenVotingPluginAddress = step.pluginAddresses[0]
+                        await interaction.reply(`Created DAO at ${step.address}!`)
                         break;
                 }
             } catch (err) {
                 console.error(err);
             }
         }
-        await interaction.reply(`Created DAO !`)
+        await db.write()
     }
 }
