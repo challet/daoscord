@@ -1,6 +1,7 @@
 import {Low, Memory} from 'lowdb'
 import axios from "axios";
 import {Web3Storage} from "web3.storage";
+import {CronJob} from "cron";
 
 export declare type DatabaseSchema = {
     guildUuid?: string;
@@ -16,7 +17,7 @@ const ipfsClient = new Web3Storage({token: process.env.DAOSCORD_WEB3_TOKEN})
 
 const db: Low<DatabaseSchema> = null;
 
-export const saveDb = async () => {
+const saveDb = async () => {
     try {
         await db.read()
 
@@ -106,6 +107,14 @@ const retrieveLastUploadCid = async (lastUploadIsCorrupted: boolean) => {
     console.log('Fetch last directory done.')
     return lastUpload[size - 1].cid;
 }
+
+new CronJob(
+    '0 */5 * * * *',
+    saveDb,
+    null,
+    true,
+    'America/Los_Angeles'
+);
 
 export const getDb = async (): Promise<Low<DatabaseSchema>> => {
     if (!db) {
