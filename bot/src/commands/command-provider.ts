@@ -19,6 +19,18 @@ export const provideCommands = (): [ApplicationCommandDataResolvable] => {
                         },
                     ]
                 },
+                {
+                    type: ApplicationCommandOptionTypes.SUB_COMMAND,
+                    name: 'start-proposal',
+                    description: 'Start a proposal',
+                    options: [
+                        {
+                            type: ApplicationCommandOptionTypes.STRING,
+                            name: 'name',
+                            description: 'Name of the DAO'
+                        },
+                    ]
+                },
             ]
         }
     ] as [ApplicationCommandDataResolvable]
