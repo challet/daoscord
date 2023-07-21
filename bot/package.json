@@ -1,0 +1,27 @@
+{
+  "name": "daoscord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "@aragon/sdk-client": "^1.10.0-rc1",
+    "@aragon/sdk-client-common": "^1.2.0-rc0",
+    "@ethersproject/providers": "^5.7.2",
+    "@ethersproject/wallet": "^5.7.0",
+    "discord.js": "^13.3.1",
+    "dotenv": "^16.0.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
