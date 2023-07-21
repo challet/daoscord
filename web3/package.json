@@ -1,0 +1,11 @@
+{
+  "name": "web3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.9.2",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "truffle": "^5.11.0"
+  }
+}
