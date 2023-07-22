@@ -8,6 +8,14 @@ const minimalContextParams: ContextParams = {
     network: SupportedNetwork.MUMBAI,
     web3Providers: rpcUrl,
     signer: signer,
+    ipfsNodes: [
+        {
+            url: "https://test.ipfs.aragon.network/api/v0",
+            headers: {
+                "X-API-KEY": "b477RhECf8s8sdM7XrkLBs2wHc4kCMwpbcFC55Kt",
+            },
+        }
+    ],
 };
 const context: Context = new Context(minimalContextParams);
 

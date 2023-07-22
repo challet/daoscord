@@ -27,10 +27,10 @@ export class ProposalService {
             description: description,
             resources: [],
         };
-
-        const metadataUri: string = await tokenVotingClient.methods.pinMetadata(
-            metadata,
-        );
+        const metadataUri = ''
+        // const metadataUri: string = await tokenVotingClient.methods.pinMetadata(
+        //     metadata,
+        // );
 
         const db = await getDb()
         const pluginAddress: string = db.data.tokenVotingPluginAddress;

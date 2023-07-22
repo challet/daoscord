@@ -30,7 +30,8 @@ export class DaoService {
                 url: "https://github.com/challet/daoscord",
             }],
         };
-        const metadataUri = await client.methods.pinMetadata(metadata);
+        const metadataUri = ''
+        // const metadataUri = await client.methods.pinMetadata(metadata);
         const tokenVotingPluginInstallParams: TokenVotingPluginInstall = {
             votingSettings: {
                 minDuration: 60, // seconds
@@ -53,7 +54,7 @@ export class DaoService {
 
         const createDaoParams: CreateDaoParams = {
             metadataUri,
-            ensSubdomain: "defi-france.eth",
+            ensSubdomain: "defi-france",
             plugins: [tokenVotingInstallItem], // plugin array cannot be empty or the transaction will fail. you need at least one governance mechanism to create your DAO.
         };
 

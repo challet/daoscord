@@ -1,6 +1,6 @@
 {
   "name": "daoscord",
-  "version": "1.0.18",
+  "version": "1.0.40",
   "description": "",
   "engines": {
     "node": ">=16"
@@ -13,12 +13,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "publish": "npm version patch && npm run build && npm publish"
+    "build-publish": "npm version patch && npm run build && npm publish"
   },
   "author": "",
   "dependencies": {
     "@aragon/sdk-client": "^1.10.0-rc1",
     "@aragon/sdk-client-common": "^1.2.0-rc0",
+    "@ethersproject/contracts": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@ethersproject/wallet": "^5.7.0",
     "axios": "^1.4.0",
