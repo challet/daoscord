@@ -3,7 +3,7 @@ import {Wallet} from "@ethersproject/wallet";
 import {Client, TokenVotingClient} from "@aragon/sdk-client";
 
 const rpcUrl = "https://light-wild-sailboat.matic-testnet.discover.quiknode.pro/c09e966c0a73a4bbe97aa32b765050b617c5933c/"
-const signer = new Wallet(process.env.DAOSCORE_PRIVATE_KEY);
+const signer = new Wallet(process.env.DAOSCORD_PRIVATE_KEY);
 const minimalContextParams: ContextParams = {
     network: SupportedNetwork.MUMBAI,
     web3Providers: rpcUrl,
