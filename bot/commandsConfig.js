@@ -16,6 +16,10 @@ const commands = new SlashCommandBuilder()
     )
   )
   .addSubcommand((sub) => sub
+    .setName('join')
+    .setDescription('Register as a DAO user')
+  )
+  .addSubcommand((sub) => sub
     .setName('whoami')
     .setDescription('Show your DAO user account infos')
   )
@@ -25,7 +29,7 @@ const commands = new SlashCommandBuilder()
     .addStringOption((option) => option
       .setName('details')
       .setDescription('describe the proposal')
-      .setRequired(true)  
+      .setRequired(true)
     )
   )
 

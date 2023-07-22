@@ -6,16 +6,14 @@ const rest = new REST({
   timeout: 60 * 10 * 1000
 }).setToken(process.env.DISCORD_BOT_TOKEN);
 
-console.log(rest);
-
 (async () => {
   try {
     console.log('Deploying commands to Discord severs')
     console.info(commands.toJSON())
   
     const data = await rest.put(
-      Routes.applicationGuildCommands(process.env.DISCORD_APP_ID),
-      { body: commands.toJSON() }
+      Routes.applicationCommands(process.env.DISCORD_APP_ID),
+      { body: [commands.toJSON()] }
     )
     
     console.log(`Successfully reloaded ${data.length} application (/) commands.`);
