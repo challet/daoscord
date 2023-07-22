@@ -16,8 +16,18 @@ export const provideCommands = (): [ApplicationCommandDataResolvable] => {
                             type: ApplicationCommandOptionTypes.STRING,
                             name: 'name',
                             description: 'Name of the DAO'
-                        },
+                        }
                     ]
+                },
+                {
+                  type: ApplicationCommandOptionTypes.SUB_COMMAND,
+                  name: 'whoami',
+                  description: 'Show your DAO user account infos'
+                },
+                {
+                  type: ApplicationCommandOptionTypes.SUB_COMMAND,
+                  name: 'join',
+                  description: 'Create a user DAO account'
                 },
                 {
                     type: ApplicationCommandOptionTypes.SUB_COMMAND,

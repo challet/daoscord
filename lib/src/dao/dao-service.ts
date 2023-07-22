@@ -82,4 +82,10 @@ export class DaoService {
         }
         await db.write()
     }
+    
+    
+    public async join(interaction: CommandInteraction) {
+    
+    
+    }
 }
