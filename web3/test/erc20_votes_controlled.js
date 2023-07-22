@@ -48,7 +48,7 @@ contract("Erc20VotesControlled", function (accounts) {
     await contract.allot(accounts[1], 500, { from: accounts[0] });
     assert.isTrue(true); // it didn't throw before
     
-    await expectRevert(contract.allot(accounts[2], 500, { from: accounts[1] }), 'Error: Revert (message: Ownable: caller is not the owner)');
+    await expectRevert(contract.allot(accounts[2], 500, { from: accounts[1] }), 'Ownable: caller is not the owner');
     
   });
   
