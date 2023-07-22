@@ -2,14 +2,12 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Erc20VotesControlled is ERC20Votes, Ownable {
+contract Erc20VotesControlled is ERC20, Ownable {
   error NotTransferable();
   
-  constructor(string memory name_, string memory symbol_) ERC20Permit(name_) ERC20(name_, symbol_) Ownable() {
+  constructor(string memory name_, string memory symbol_) ERC20(name_, symbol_) Ownable() {
   }
   
   function decimals() public pure override returns (uint8) {
