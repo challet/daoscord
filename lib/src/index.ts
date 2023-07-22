@@ -1,1 +1,0 @@
-export {DaoscordClient} from './client'

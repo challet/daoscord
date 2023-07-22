@@ -1,11 +1,12 @@
 {
   "name": "daoscord",
-  "version": "1.0.18",
+  "version": "1.0.40",
   "description": "",
   "engines": {
     "node": ">=16"
   },
   "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
@@ -13,24 +14,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "publish": "npm version patch && npm run build && npm publish"
+    "build-publish": "npm version patch && npm run build && npm publish"
   },
   "author": "",
   "dependencies": {
-    "@aragon/sdk-client": "^1.10.0-rc1",
+    "@aragon/sdk-client": "^1.10.1-rc1",
     "@aragon/sdk-client-common": "^1.2.0-rc0",
+    "@ethersproject/contracts": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@ethersproject/wallet": "^5.7.0",
     "axios": "^1.4.0",
     "cron": "^2.3.1",
     "discord.js": "^13.3.1",
     "dotenv": "^16.0.0",
+    "logform": "^2.3.0",
     "lowdb": "^3.0.0",
-    "web3.storage": "^3.5.1"
+    "web3.storage": "^3.5.1",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.7.1"
   },
-  "license": "ISC",
-  "devDependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
-  }
+  "license": "ISC"
 }
