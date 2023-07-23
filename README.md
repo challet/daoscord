@@ -1,6 +1,19 @@
 # Daoscord
 **The easiest and most convenient way to decentralize your Discord server!**
 
+### How to install
+Import the library in your project:
+```npm install daoscord``` or ```yarn add daoscord```.
+Then create a web3.storage account and pass the api key when instanciating :
+```
+const daoscordClient = new DaoscordClient (
+        adminPrivateKey,
+        rpcUrl,
+        web3StorageApiKey
+    )
+await daoscordClient.init()
+  ```
+
 ### What is Daoscord?
 Demeter, a Discord bot, has been an integral part of the DeFi France community for the past two years.
 Members earn reputation points every two weeks based on their activity, which can be used for voting, moderating, giveaways, and more within the community.
@@ -18,6 +31,12 @@ The solution is a JavaScript library that:
 -relies on QuickNode RPC
 -delegates the members wallets management to DFNS
 -runs on Polygon PoS for scalability and low costs
+
+### Structure
+The library is divided into 3 main parts:
+* lib - contains the main logic
+* contracts - contains the contracts used by the library
+* bot - contains an integration example with a Discord bot
 
 ### Slides
 https://docs.google.com/presentation/d/1TfVOOHe4JgTJirLwrfMeiPgx2XFNUqOTPsyUnFRE6ZI/edit?usp=sharing
