@@ -4,7 +4,7 @@
 ### What is Daoscord?
 Demeter, a Discord bot, has been an integral part of the DeFi France community for the past two years.
 Members earn reputation points every two weeks based on their activity, which can be used for voting, moderating, giveaways, and more within the community.
-The reputation points are calculated using the "quadratic voting" algorithm, similar to Gitcoin, which ensures a more equitable and fair outcome.
+The reputation points are calculated using the "quadratic founding" algorithm, similar to Gitcoin, which ensures a more equitable and fair outcome.
 
 Despite decentralizing our decision-making, our tech stack still remains centralized. The bot logic is currently hosted on a single server.
 There is always room for improvement, and that was precisely our goal here!
@@ -18,3 +18,6 @@ The solution is a JavaScript library that:
 -relies on QuickNode RPC
 -delegates the members wallets management to DFNS
 -runs on Polygon PoS for scalability and low costs
+
+### Slides
+https://docs.google.com/presentation/d/1TfVOOHe4JgTJirLwrfMeiPgx2XFNUqOTPsyUnFRE6ZI/edit?usp=sharing
