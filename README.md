@@ -32,11 +32,6 @@ The solution is a JavaScript library that:
 -delegates the members wallets management to DFNS
 -runs on Polygon PoS for scalability and low costs
 
-### Structure
-The library is divided into 3 main parts:
-* lib - contains the main logic
-* contracts - contains the contracts used by the library
-* bot - contains an integration example with a Discord bot
 
 ### Slides
 https://docs.google.com/presentation/d/1TfVOOHe4JgTJirLwrfMeiPgx2XFNUqOTPsyUnFRE6ZI/edit?usp=sharing
@@ -44,6 +39,8 @@ https://docs.google.com/presentation/d/1TfVOOHe4JgTJirLwrfMeiPgx2XFNUqOTPsyUnFRE
 
 ### Repository structure
 
+The library is divided into 3 main parts:
+
 * `web3` holds the custom ERC20Votes contract used to allot voting power to users. It is deployed along the Aragon DAO and its TokenVoting plugin
-* `lib` contains the core API to the actions, calling and orchestrating the providers services together
+* `lib` contains the core API to run the actions, calling and orchestrating the providers services together
 * `bot` is the actual bot implementation. It can be installed on any Discord server
