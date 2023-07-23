@@ -181,6 +181,24 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
+"@dfns/sdk-keysigner@^0.1.0-alpha.10-2":
+  version "0.1.0-alpha.10-2"
+  resolved "https://registry.yarnpkg.com/@dfns/sdk-keysigner/-/sdk-keysigner-0.1.0-alpha.10-2.tgz#d511a7cbdfa320f67622d66d9116aad72891681c"
+  integrity sha512-SkhmsqG6Xx2VT7kRyniRJNyWGb5iZeGd9/xtHe615oqLuWQLAIWaDVsfhkNqSn1cxAoXc+cRu0nfCMTBFSjbPw==
+  dependencies:
+    buffer "^6.0.3"
+    cross-fetch "^3.1.6"
+    uuid "9.0.0"
+
+"@dfns/sdk@^0.1.0-alpha.10":
+  version "0.1.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@dfns/sdk/-/sdk-0.1.0-alpha.10.tgz#c304c3109302a161dd121d8989c7b0737a6d5978"
+  integrity sha512-XPltHunP//W1V6DTbbr8q7TM3bLaxswcO0oUIhcFNe8cUvrEUa0nRDdtAlYVeipH70h9SnixDGWWuKrTsifTRQ==
+  dependencies:
+    buffer "^6.0.3"
+    cross-fetch "^3.1.6"
+    uuid "9.0.0"
+
 "@discordjs/builders@^0.16.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.16.0.tgz#3201f57fa57c4dd77aebb480cf47da77b7ba2e8c"
@@ -1259,7 +1277,7 @@ cron@^2.3.1:
   dependencies:
     luxon "^3.2.1"
 
-cross-fetch@^3.1.4, cross-fetch@^3.1.5:
+cross-fetch@^3.1.4, cross-fetch@^3.1.5, cross-fetch@^3.1.6:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.8.tgz#0327eba65fd68a7d119f8fb2bf9334a1a7956f82"
   integrity sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==
@@ -3204,6 +3222,11 @@ util@^0.12.3, util@^0.12.5:
     is-generator-function "^1.0.7"
     is-typed-array "^1.1.3"
     which-typed-array "^1.1.2"
+
+uuid@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"

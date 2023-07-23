@@ -24,6 +24,10 @@ const commands = new SlashCommandBuilder()
     .setDescription('Show your DAO user account infos')
   )
   .addSubcommand((sub) => sub
+    .setName('ls')
+    .setDescription('List the DAO users')
+  )
+  .addSubcommand((sub) => sub
     .setName('start-proposal')
     .setDescription('Start a proposal')
     .addStringOption((option) => option
