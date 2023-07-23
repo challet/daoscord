@@ -8,7 +8,7 @@ export default async (interaction) => {
   
   readUser(interaction.user.id)
     .then((data) => {
-      interaction.editReply({ content: `Status ${data.status} since ${data.createdAt}.\n Your wallet is https://mumbai.polygonscan.com/address/${data.address}. You have ${data.balance} voting power` })
+      interaction.editReply({ content: `Status ${data.status} since ${data.dateCreated}.\n Your wallet is https://mumbai.polygonscan.com/address/${data.address}.\n You have **${data.balance.toString()}** voting power.` })
     })
     .catch((error) => {
       interaction.editReply({ content: 'Error: ```' + error + '```' })
