@@ -40,3 +40,10 @@ The library is divided into 3 main parts:
 
 ### Slides
 https://docs.google.com/presentation/d/1TfVOOHe4JgTJirLwrfMeiPgx2XFNUqOTPsyUnFRE6ZI/edit?usp=sharing
+
+
+### Repository structure
+
+* `web3` holds the custom ERC20Votes contract used to allot voting power to users. It is deployed along the Aragon DAO and its TokenVoting plugin
+* `lib` contains the core API to the actions, calling and orchestrating the providers services together
+* `bot` is the actual bot implementation. It can be installed on any Discord server
