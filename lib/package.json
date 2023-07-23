@@ -25,6 +25,8 @@
     "@biconomy/common": "^3.0.0-alpha.0",
     "@biconomy/core-types": "^3.0.0-alpha.0",
     "@biconomy/paymaster": "^3.0.0-alpha.0",
+    "@dfns/sdk": "^0.1.0-alpha.10",
+    "@dfns/sdk-keysigner": "^0.1.0-alpha.10-2",
     "@ethersproject/contracts": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@ethersproject/wallet": "^5.7.0",
